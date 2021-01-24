@@ -14,8 +14,8 @@ edged = cv2.Canny(gray, 30, 200)
 cv2.imshow('Canny Edges', edged)
 cv2.waitKey(0)
 
-# Finding Contours
-contours, hierarchy = cv2.findContours(edged, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+# Finding Contours - cv2.CHAIN_APPROX_SIMPLE: and&start points - cv2.CHAIN_APPROX_None : all points
+contours, hierarchy = cv2.findContours(edged, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cv2.imshow('Canny Edges After Contouring', edged)
 cv2.waitKey(0)
 
